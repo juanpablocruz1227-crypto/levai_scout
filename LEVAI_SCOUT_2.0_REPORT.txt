@@ -1,0 +1,67 @@
+﻿LEVAI SCOUT 2.0
+===============
+
+Data:
+09/20/2026 17:13:20
+
+Branch:
+levai-scout-2.0
+
+Commit atual:
+4af166e expande Levai Scout 2.0 com pesquisa estudo dev mode historico e workspace
+
+Dart:
+Dart SDK version: 3.11.4 (stable) (Tue Mar 24 01:02:20 2026 -0700) on "windows_x64"
+
+ANALYZE:
+OK
+
+TESTES:
+OK
+
+OLLAMA:
+ONLINE
+
+SEARXNG:
+ONLINE
+
+FUNCIONALIDADES:
+- SearXNG
+- POP
+- múltiplas consultas
+- deduplicação
+- Chromium/Web Reader
+- Ollama
+- descoberta de modelos
+- Study Engine
+- Research Service
+- Dev Mode
+- histórico
+- configurações
+- exportação
+- modos de operação
+- Command Router
+- testes automatizados
+
+COMANDOS:
+- /search
+- /ask
+- /pop
+- /study
+- /summary
+- /quiz
+- /flashcards
+- /models
+- /model
+- /sources
+- /health
+- /history
+- /help
+- /clear
+- /open
+- /mode
+- /quit
+- ? pergunta
+
+STATUS:
+BASE 2.0 VALIDADA
