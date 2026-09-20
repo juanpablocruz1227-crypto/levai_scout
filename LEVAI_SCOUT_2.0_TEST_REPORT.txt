@@ -1,0 +1,47 @@
+﻿LEVAI SCOUT 2.0
+================
+
+Data:
+09/20/2026 17:20:39
+
+Branch:
+levai-scout-2.0
+
+Commit:
+806f58c finaliza base do Levai Scout 2.0
+
+Dart:
+Dart SDK version: 3.11.4 (stable) (Tue Mar 24 01:02:20 2026 -0700) on "windows_x64"
+
+Arquivos:
+OK
+
+Dependências:
+OK
+
+Format:
+OK
+
+Analyze:
+OK
+
+Testes:
+OK
+
+Command Router:
+VERIFICADO
+
+POP:
+VERIFICADO
+
+Ollama:
+VERIFICADO
+
+SearXNG:
+VERIFICADO
+
+Build:
+VERIFICADO
+
+Falhas críticas:
+0
