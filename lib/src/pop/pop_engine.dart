@@ -6,25 +6,35 @@ class PopEngine {
       query = query.substring(1).trim();
     }
 
-    final words =
-        query.split(RegExp(r'\s+')).where((word) => word.isNotEmpty).toList();
-
     final programming = RegExp(
-      r'\b(c\+\+|cpp|dart|flutter|lua|python|git|github|linux|api|sql|'
-      r'programming|programação|code|codigo|código|function|class|'
-      r'algorithm|algoritmo|database|framework)\b',
+      r'\b(c\+\+|cpp|dart|flutter|lua|python|rust|java|'
+      r'git|github|linux|api|sql|programming|programação|'
+      r'code|codigo|código|function|função|class|classe|'
+      r'algorithm|algoritmo|database|banco|framework|'
+      r'compiler|compilador|lexer|parser|pointer|ponteiro|'
+      r'vector|array|memory|memória)\b',
       caseSensitive: false,
     ).hasMatch(query);
 
+    final keywords =
+        query.split(RegExp(r'\s+')).where((word) => word.isNotEmpty).toList();
+
     return PopQuery(
       original: query,
-      keywords: words,
+      keywords: keywords,
       programming: programming,
     );
   }
 
-  static List<String> generateSearchQueries(String input) {
+  static List<String> generateSearchQueries(
+    String input, {
+    int maxQueries = 3,
+  }) {
     final result = analyze(input);
+
+    if (result.original.isEmpty) {
+      return const [];
+    }
 
     final queries = <String>[
       result.original,
@@ -33,13 +43,12 @@ class PopEngine {
     if (result.programming) {
       queries.add('${result.original} documentation');
       queries.add('${result.original} examples');
-      queries.add('${result.original} tutorial');
     } else {
       queries.add('${result.original} explained');
       queries.add('${result.original} guide');
     }
 
-    return queries.toSet().toList();
+    return queries.take(maxQueries).toList();
   }
 }
 
