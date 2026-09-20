@@ -1,8 +1,5 @@
-.dart_tool/
-
-.dart_tool/
+﻿.dart_tool/
 build/
-
-
 levai_scout_backup/
-
+*.log
+.DS_Store
